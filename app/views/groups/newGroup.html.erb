@@ -1,0 +1,22 @@
+<hl>New Receipt Record</h1>
+
+ <%= form_with scope: :Receipt, local: true do |form| %>
+ <p>
+   <%= form.label :title %><br>
+   <%= form.text_field :title %>
+ </p>
+
+ <p>
+   <%= form.label :location %><br>
+   <%= form.text_area :location %>
+ </p>
+
+ <p>
+   <%= form.label :expense %><br>
+   <%= form.text_area :expense %>
+ </p>
+
+ <p>
+   <%= form.submit %>
+ </p>
+<% end %>
