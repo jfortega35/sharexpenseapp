@@ -2,6 +2,8 @@ Rails.application.routes.draw do
   get 'welcome/index'
 
   resources :receipts
+  resources :groups
+  resources :users
 
   root 'welcome#index'
 

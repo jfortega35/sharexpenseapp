@@ -1,0 +1,32 @@
+<hl>New User</h1>
+
+ <%= form_with scope: :Users, local: true do |form| %>
+ <p>
+   <%= form.label :Username %><br>
+   <%= form.text_field :Username %>
+ </p>
+
+ <p>
+   <%= form.label :FirstName %><br>
+   <%= form.text_area :FirstName %>
+ </p>
+
+ <p>
+   <%= form.label :LastName %><br>
+   <%= form.text_area :LastName %>
+ </p>
+
+ <p>
+   <%= form.label :Email %><br>
+   <%= form.text_area :Email %>
+ </p>
+
+ <p>
+   <%= form.label :Phone %><br>
+   <%= form.text_area :Phone %>
+ </p>
+
+ <p>
+   <%= form.submit %>
+ </p>
+<% end %>
