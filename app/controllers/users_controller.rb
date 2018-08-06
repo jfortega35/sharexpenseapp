@@ -8,4 +8,10 @@ class UsersController < ApplicationController
   @user.save
   redirect_to @user
   end
+
+  private
+    def user_params
+      params.require(:user).permit(:username, :firstname, :lastname, :email, :phone)
+    end
+
 end
