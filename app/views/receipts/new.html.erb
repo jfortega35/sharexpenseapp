@@ -1,6 +1,6 @@
  <hl>New Receipt Record</h1>
 
-  <%= form_with scope: :receipt, local: true do |form| %>
+  <%= form_with scope: :receipt, url: receipts_path, local: true do |form| %>
   <p>
     <%= form.label :title %><br>
     <%= form.text_field :title %>

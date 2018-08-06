@@ -1,6 +1,6 @@
 <hl>New Group </h1>
 
- <%= form_with scope: :Groups, local: true do |form| %>
+ <%= form_with scope: :group, url: groups_path, local: true do |form| %>
  <p>
    <%= form.label :name %><br>
    <%= form.text_field :name %>
