@@ -1,9 +1,17 @@
 class ReceiptsController < ApplicationController
+  def index
+    @receipts = Receipt.all
+  end
+
+  def show
+    @receipt = Receipt.find(params[:id])
+  end
+
   def new
   end
 
   def create
-    @receipt = Receipt.new(params[:receipt])
+    @receipt = Receipt.new(receipt_params)
 
     @receipt.save
     redirect_to @receipt
