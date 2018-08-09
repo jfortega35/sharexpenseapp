@@ -8,14 +8,18 @@ class ReceiptsController < ApplicationController
   end
 
   def new
+    @receipt = Receipt.new
   end
 
   def create
     @receipt = Receipt.new(receipt_params)
 
-    @receipt.save
+    if @receipt.save
     redirect_to @receipt
+  else
+    render 'new'
   end
+end
 
   private
     def receipt_params
