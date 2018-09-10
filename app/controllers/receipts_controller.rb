@@ -36,6 +36,13 @@ def update
   end
 end
 
+def destroy
+  @receipt = Receipt.find(params[:id])
+  @receipt.destroy
+
+  redirect_to receipts_path
+end 
+
   private
     def receipt_params
       params.require(:receipt).permit(:title, :location, :expense, :comments)
