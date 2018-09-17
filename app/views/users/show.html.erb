@@ -1,32 +1,40 @@
-<p>
-  <strong>Group ID</strong>
-  <%= @user.group_id %>
-</p>
-
-<p>
-  <strong>Username:</strong>
-  <%= @user.username %>
-</p>
-
-<p>
-  <strong>First Name:</strong>
-  <%= @user.firstname %>
-</p>
-
-<p>
+<h1>User Receipts</h1>
+<table>
+  <thead>
+    <tr>
+      <strong>Group ID</strong>
+      <%= @user.group_id %>
+    </tr><br>
+    <tr>
+      <strong>Group Name:</strong>
+      <%= @user.group.name %>
+    </tr><br><br>
+    <tr>
+      <strong>Username:</strong>
+      <%= @user.username %>
+    </tr><br>
+    <tr>
+      <strong>First Name:</strong>
+      <%= @user.firstname %>
+    </tr><br>
+    <tr>
   <strong>Last Name:</strong>
   <%= @user.lastname %>
-</p>
+  </tr><br>
+  <tr>
+    <strong>Email:</strong>
+    <%= @user.email %>
+  </tr><br>
+  <tr>
+    <strong>Phone:</strong>
+    <%= @user.phone %>
+  </tr><br>
+  
+  <!--TO DO add headers for receipt fields -->
+  
+  </thead>
+</table>
 
-<p>
-  <strong>Email:</strong>
-  <%= @user.email %>
-</p>
-
-<p>
-  <strong>Phone:</strong>
-  <%= @user.phone %>
-</p>
 
 <%= link_to 'Edit', edit_user_path(@user) %> |
 <%= link_to 'Back', users_path %>

@@ -1,14 +1,14 @@
-<p>
-  <strong>Name:</strong>
-  <%= @group.name %>
-</p>
-
+<h1>Group Members:</h1>
 <table>
   <thead>
-  <tr>
-    <strong>Name:</strong>
-    <%= @group.name %>
-  </tr>
+    <tr>
+      <strong>Group ID#</strong>
+      <%= @group.id %>
+    </tr><br>
+    <tr>
+      <strong>Group Name:</strong>
+      <%= @group.name %>
+    </tr><br><br>
   <tr>
     <th>Username</th>
     <th>First Name</th>
@@ -36,8 +36,10 @@
   </tbody>
 </table>
 
-<%= link_to 'New Member', new_user_path(@user) %>
+<p>
+  <%= link_to 'New Member', new_user_path(@user) %>
+  <%= link_to 'Edit', edit_group_path(@group) %> 
+  <%= link_to 'Back', groups_path %>
+  <%= link_to 'Home', controller: 'welcome' %>  
+</p>
 
-<%= link_to 'Edit', edit_group_path(@group) %> |
-<%= link_to 'Back', groups_path %>
-<%= link_to 'Home', controller: 'welcome' %>
