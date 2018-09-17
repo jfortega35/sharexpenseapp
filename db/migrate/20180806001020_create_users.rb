@@ -6,6 +6,7 @@ class CreateUsers < ActiveRecord::Migration[5.1]
       t.string :lastname
       t.string :email
       t.string :phone
+      t.belongs_to :group, index: true
 
       t.timestamps
     end

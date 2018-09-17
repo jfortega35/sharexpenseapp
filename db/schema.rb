@@ -33,8 +33,10 @@ ActiveRecord::Schema.define(version: 20180806001020) do
     t.string "lastname"
     t.string "email"
     t.string "phone"
+    t.integer "group_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["group_id"], name: "index_users_on_group_id"
   end
 
 end

@@ -5,11 +5,13 @@
 
 <table>
   <tr>
+    <th>Group ID#</th>
     <th>Group Name</th>
   </tr>
 
   <% @groups.each do |group| %>
     <tr>
+      <td><%= group.id %></td>
       <td><%= group.name %></td>
       <td><%= link_to 'Show', group_path(group) %></td>
       <td><%= link_to 'Edit', edit_group_path(group) %></td>
