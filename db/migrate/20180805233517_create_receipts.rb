@@ -5,6 +5,7 @@ class CreateReceipts < ActiveRecord::Migration[5.1]
       t.string :location
       t.string :expense
       t.text :comments
+      t.belongs_to :user, index: true
 
       t.timestamps
     end
