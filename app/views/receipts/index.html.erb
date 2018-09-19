@@ -5,6 +5,7 @@
 
 <table>
   <tr>
+    <th>User ID#</th>
     <th>Title</th>
     <th>Location</th>
     <th>Expense</th>
@@ -13,6 +14,7 @@
 
   <% @receipts.each do |receipt| %>
     <tr>
+      <td><%= receipt.user_id %></td>
       <td><%= receipt.title %></td>
       <td><%= receipt.location %></td>
       <td><%= receipt.expense %></td>

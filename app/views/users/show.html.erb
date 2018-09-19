@@ -10,6 +10,10 @@
       <%= @user.group.name %>
     </tr><br><br>
     <tr>
+      <strong>User ID</strong>
+      <%= @user.id %>
+    </tr><br>
+    <tr>
       <strong>Username:</strong>
       <%= @user.username %>
     </tr><br>
@@ -28,14 +32,35 @@
   <tr>
     <strong>Phone:</strong>
     <%= @user.phone %>
-  </tr><br>
+  </tr>
+  <tr>
+    <th>User ID#</th>
+    <th>Title</th>
+    <th>Location</th>
+    <th>Expense</th>
+    <th>Comments</th>
+  </tr>
+  </thead><br>
   
-  <!--TO DO add headers for receipt fields -->
-  
-  </thead>
+<tbody>
+  <% @user.receipts.each do |receipt| %>
+    <tr>
+      <td><%= receipt.user_id %></td>
+      <td><%= receipt.title %></td>
+      <td><%= receipt.location %></td>
+      <td><%= receipt.expense %></td>
+      <td><%= receipt.comments %></td>
+      <td><%= link_to 'Show', receipt_path(receipt) %></td>
+      <td><%= link_to 'Edit', edit_receipt_path(receipt) %></td>
+      <td><%= link_to 'Destroy', receipt_path(receipt),
+              method: :delete,
+              data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+  <% end %>
+  </tbody>
 </table>
 
-
+<%= link_to 'New Receipt Record', new_receipt_path %>
 <%= link_to 'Edit', edit_user_path(@user) %> |
 <%= link_to 'Back', users_path %>
 <%= link_to 'Home', controller: 'welcome' %>

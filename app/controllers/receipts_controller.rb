@@ -45,7 +45,7 @@ end
 
   private
     def receipt_params
-      params.require(:receipt).permit(:title, :location, :expense, :comments)
+      params.require(:receipt).permit(:user_id, :title, :location, :expense, :comments)
     end
 
 end

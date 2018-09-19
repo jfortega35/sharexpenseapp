@@ -1,23 +1,32 @@
-<p>
-  <strong>Title:</strong>
-  <%= @receipt.title %>
-</p>
+<h1>Receipt Record</h1>
+<table>
+  <thead>
+    <tr>
+      <strong>User ID</strong>
+      <%= @receipt.user_id %>
+    </tr><br>
+    <tr>
+      <strong>Title:</strong>
+      <%= @receipt.title %>
+    </tr><br>
+    <tr>
+      <strong>Location:</strong>
+    <%= @receipt.location %>
+    </tr><br>
+    <tr>
+      <strong>Expense:</strong>
+      <%= @receipt.expense %>
+    </tr><br>
+    <tr>
+      <strong>Comments:</strong>
+      <%= @receipt.comments %>
+    </tr><br>
+  </thead><tr></tr>
+  <tbody>
+  </tbody><br>
+</table>
 
-<p>
-  <strong>Location:</strong>
-  <%= @receipt.location %>
-</p>
-
-<p>
-  <strong>Expense:</strong>
-  <%= @receipt.expense %>
-</p>
-
-<p>
-  <strong>Comments:</strong>
-  <%= @receipt.comments %>
-</p>
-
+<%= link_to 'New Receipt Record', new_receipt_path %>
 <%= link_to 'Edit', edit_receipt_path(@receipt) %> |
 <%= link_to 'Back', receipts_path %>
-  <%= link_to 'Home', controller: 'welcome' %>
+<%= link_to 'Home', controller: 'welcome' %>
